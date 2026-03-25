@@ -1,0 +1,14 @@
+1. An administrator is trying to configure Metro Availability between Nutanix ESXi-based clusters.
+However, the Compatible Remote Sites screen does not list all required storage containers.
+Which two reasons could be a cause for this issue? (Choose two.)
+A. Source and destination hardware are from different vendors.
+B. The remote site storage container has compression enabled.
+C. The destination storage container is not empty.
+D. Both storage containers must have the same name.
+
+2. The customer expects to maintain a cluster runway of 9 months. The customer doesn’t have a budget
+for 6 months but they want to add new workloads to the existing cluster.
+A. Add resources to the cluster.
+B. Postpone the start of new workloads.
+C. Delete workloads running on the cluster.
+D. Change the target to 9 months.
