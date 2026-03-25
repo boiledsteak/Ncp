@@ -12,3 +12,47 @@ A. Add resources to the cluster.
 B. Postpone the start of new workloads.
 C. Delete workloads running on the cluster.
 D. Change the target to 9 months.
+
+3. After reviewing the VM’s CPU Ready Time data shown in the exhibit, which step should the
+administrator take to diagnose the issue further?
+A. Check the number of vCPUs assigned to each CVM.
+B. Review host CPU utilization.
+C. Assess cluster SSD capacity.
+D. Enable VM memory oversubscription.
+
+4. In a scale-out Prism Central deployment, what additional functionality does configuring an FQDN
+instead of a Virtual IP provide?
+A. Load balancing
+B. Resiliency
+C. Segmentation
+D. SSL Certificate
+
+5. After adding new workloads, why is Overall Runway below 365 days and the scenario still shows the
+cluster is in good shape?{Target: 1 Month, overall runway: 58 days, CPU runway: 58 days, RAM runway: 58 days, storage runway: 365 days}
+A. Because Storage Runway is still good.
+B. Because new workloads are sustainable.
+C. Because there are recommended resources.
+D. Because the Target is 1 month.
+
+6. An administrator needs to set up a protection policy in preparation for a Disaster Recovery (DR) test.
+What is the first step required to satisfy this task?
+A. Install NGT (Nutanix Guest Tools) on VMs where applications are supported.
+B. Create an Availability Zone between Production and DR.
+C. Convert the source cluster to AHV.
+D. Create a point-in-time snapshot of source VMs
+
+7. An administrator wants to ensure that VMs can be migrated and restarted on another node in the
+event of a single-host failure.
+What action should be taken in Prism Element to meet this requirement?
+A. Set Redundancy Factor to 3.
+B. Enable HA Reservation.
+C. Configure a Protection Domain.
+D. Configure an RF1 storage container.
+
+8. An administrator started an LCM upgrade of the AHV hosts but realized that the upgrade would
+exceed the planned maintenance window.
+Which feature should be leveraged to prevent additional updates from occurring?
+A. Cancel the LCM tasks via the Ergon command line (ecli).
+B. Run the lcm_task_cleanup.py script.
+C. Restart Genesis on the cluster to restart the LCM service.
+D. Use the Stop Update feature in LCM
