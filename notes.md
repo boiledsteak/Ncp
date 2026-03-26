@@ -43,3 +43,27 @@ prism central can manage multiple cluster. prism element manage ONE cluster only
 Advertised capacity limits how big a container can grow, while reserved capacity guarantees how much space it will always have
 
 Bully VMs = VMs consuming excessive resources and negatively impacting others
+
+Prism Central Memory Cluster Runway Diagram red line =  effective memory capacity limit based on the cluster's current
+configuration. NOT a hard limit but an indication of the available memory before potential performance
+issues occur
+
+IGMP Snooping = Tracks which VMs join multicast groups
+
+LCM performs rolling upgrades. so single node cluster wont work
+
+RF3 cluster = replica factor 3
+
+RF2	2 copies	tolerates 1 node failure without data loss
+RF3	3 copies	tolerates 2 node failure without data loss
+
+
+Protection domain:
+When you assign VMs, storage, any resources to a Protection Domain, you are saying:
+✔ Take consistent snapshots of these VMs together
+✔ Track changes (delta-based replication)
+✔ Replicate them to another cluster
+✔ Allow failover/failback as a unit
+
+
+Nutanix AHV port mirroring is performed within the same node first then sent elsewhere

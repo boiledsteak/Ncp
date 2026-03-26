@@ -157,3 +157,166 @@ A. A user with Cluster Viewer role deleted the report.
 B. The user-generated report was archived.
 C. Reports are automatically deleted after 24 hours.
 D. The report is stored in the cluster’s Prism Element.
+
+22.An administrator is looking at the memory cluster runway diagram as shown in exhibit, in Prism
+Central. The environment has three hosts with the following configuration:
+CPU: 2x Intel Xeon Gold (8 cores, 2.6 GHz)
+RAM: 256 GB per host
+Storage: SSDs and HDDs
+The Intelligent Operations feature has been active for one month, but no further configurations were
+applied.
+What does the dotted red line mean?
+A. It is the default trend analysis static threshold that can be manually set.
+B. It is the maximum memory the administrator can assign to VMs.
+C. It is the calculated memory oversubscription limit for currently running VMs.
+D. It is the usable capacity based on cluster configuration options.
+
+23. Due to application requirements, an administrator needs to support a multicast configuration in an
+AHV cluster.
+Which AHV feature can be used to optimize network traffic so that multicast traffic is only forwarded
+to the VMs that need to receive it?
+A. LACP
+B. UDP
+C. IGMP Snooping
+D. Network Segmentation
+
+24. An administrator has been tasked with performing firmware upgrades for all Nutanix sites.
+When attempting to perform firmware upgrades via Life Cycle Manager (LCM) at a remote site with a
+single-node cluster, no firmware updates are listed as available. The administrator confirmed that the
+currently installed firmware is several revisions behind.
+Why are no firmware upgrades listed in LCM for this cluster?
+A. Single-node clusters only support one-disk firmware upgrades.
+B. LCM is not supported on single-node clusters.
+C. LCM cannot perform firmware upgrades on single-node clusters.
+D. LCM does not have connectivity to the internet.
+
+25. An administrator is responsible for resource planning and needs to plan for resiliency of a 10-node
+RF3 cluster. The cluster has 100TB of storage.
+How should the administrator plan for capacity in the event of future failures?
+A. Set Reserve Storage Capacity (%) to 20.
+B. Set Reserve Capacity for Failure to None.
+C. Set Reserve Capacity for Failure to Auto Detect.
+D. Set Reserve Memory Capacity (%) to 20
+
+26. An administrator migrated a physical MySQL database from a legacy 3-tier environment to a Nutanix
+cluster.
+After migration, the administrator finds that at peak load, the number of IOPS is lower than
+expected, and latency is higher.
+Which two steps should the administrator take to improve performance? (Choose two.)
+A. Ensure that the SQL data vDisks are thick provisioned.
+B. Create additional vDisks for SQL data.
+C. Use LVM to stripe the SQL data across multiple vDisks.
+D. Ensure that the SQL data vDisks are thin provisioned.
+
+27. After upgrading Prism Central from PC2022.1 to PC2024.1, an administrator is unable to log in with
+their IAM domain account.
+What is the first troubleshooting step the administrator should take?
+A. Ping the Domain Controller from the CVM.
+B. Ensure port 9441 is open in the firewall.
+C. Validate the trusted signing certificate of the organization.
+D. Log in with a local admin account.
+
+28. An administrator has successfully configured Metro Availability for a Protection Domain. However,
+after a few days, an NCC warning is raised:
+"Following VMs are accessing data from remote clusters: VM-1 from remote cluster Remote-ML"
+What is the first action an administrator must take to fix the issue?
+A. Run the command:
+ncli pd list metro-avail=true | egrep "Protection Domain Stretch Role" | grep "ACTIVE"
+B. Use must-affinity rules to avoid automated VM migration to the standby datastore.
+C. Migrate the VM to its primary site and set appropriate rules for DRS and affinity.
+D. Run the command:
+ncc health_checks metro_availability_checks data_locality_check --cvm_list=X.X.X.20
+
+29. An administrator is trying to delete a protected snapshot but is unable to do so.
+What is the most likely cause?
+A. There is an active recovery occurring at that time.
+B. Ransomware has encrypted the snapshot.
+C. There is an approval policy that was denied.
+D. The snapshot has been corrupted.
+
+30. When expanding a cluster, what is required to automatically discover new nodes?
+A. New nodes must have the same hypervisor version.
+B. IPv6 multicast must be allowed on physical switches.
+C. New nodes must have the same AOS version.
+D. IPv4 multicast must be allowed on physical switches
+
+31. An administrator wants to disable password-based SSH access for the nutanix user on a CVM to
+improve security.
+What action should the administrator take?
+A. Rename the nutanix user.
+B. Block port 22 on the CVM firewall.
+C. Enable Cluster Lockdown.
+D. Delete the nutanix user
+
+32. An administrator configured a remote site for Protection Domain replication, but network
+performance and stability are impacted.
+How can the remote site configuration be adjusted to fix the issue?
+A. Configure Network Address Translation (NAT) between the two Nutanix clusters.
+B. Configure the Protection Domain with many-to-many replication.
+C. Configure a Bandwidth Throttling Policy.
+D. Configure the remote Cluster VIP as a proxy.
+
+33. An administrator needs to modify an AHV VM to support a large number of concurrent network
+connections. The VM has:
+4 vCPUs
+20 GB RAM
+OS: Microsoft Windows Server 2022
+Which modification can improve network performance for network I/O-intensive applications?
+A. Add more vCPUs.
+B. Enable AHV Turbo Technology.
+C. Enable RSS VirtIO-Net Multi-Queue.
+D. Add more RAM.
+
+34. An administrator is configuring Protection Policies to replicate VMs to a Nutanix Cloud Cluster (NC2)
+over the internet.
+To comply with security policies, how should data be protected during transmission?
+A. Configure Data on a self-encrypting drive.
+B. Configure VMs to use UEFI Secure Boot.
+C. Enable Data-at-Rest Encryption.
+D. Enable Data-in-Transit Encryption.
+
+35. A security team asks an administrator to set up port mirroring of a specific source VM to a target VM.
+What must the administrator ensure for this configuration to be possible?
+A. Source VM and Target VM are on the same VLAN.
+B. Source VM and Target VM are on the same host.
+C. Source VM and Target VM are on the same subnet.
+D. Source VM and Target VM are on the same VPC
+
+36. What is required to create a category in Nutanix?
+A. A name and a value
+B. A policy and an entity
+C. A service and a scope
+D. A catalog and a template
+
+37. An administrator wants to enable application discovery on a Nutanix cluster to monitor applications. A Prism Central instance is already configured with sufficient CPU and memory.
+What other prerequisites must be met before enabling application discovery? (Choose two.)
+A. Sufficient Prism Central VM resources
+B. Internet connection
+C. API key and key ID
+D. Network controller is enabled
+
+38. An administrator has been tasked with justifying why Nutanix Disaster Recovery was chosen for a
+multi-tier application spanning multiple business units.
+What is the most efficient way to organize and manage the workloads?
+A. Utilize a VM naming schema that allows sorting
+B. Utilize Categories to organize VMs in Recovery Plans
+C. Utilize a 1:10 ratio of Recovery Plan to VMs
+D. Utilize RESTful APIs to script creation of Recovery Plans
+
+39. An administrator is working with a network engineer to design the network architecture for a DR
+failover.
+Because DNS is well-designed, the DR site will use a different subnet but retain the same last octet in
+the IP address.
+What is the best way to achieve this?
+A. Use a custom script to update the IP address after instantiation in DR.
+B. Set up IPAM so the address is dynamically assigned during DR.
+C. Manually log into VMs after the DR event and update the last octet.
+D. Utilize Recovery Plan Offset-based IP mapping.
+
+40. In an RF2 cluster, what is the minimum number of nodes required to allow a host removal?
+A. 2
+B. 3
+C. 4
+D. 5
+
+41.
