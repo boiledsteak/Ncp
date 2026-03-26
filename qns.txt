@@ -56,3 +56,104 @@ A. Cancel the LCM tasks via the Ergon command line (ecli).
 B. Run the lcm_task_cleanup.py script.
 C. Restart Genesis on the cluster to restart the LCM service.
 D. Use the Stop Update feature in LCM
+
+9. The team leads of a development environment want to limit developer access to a specific set of
+VMs.
+What is the most efficient way to enable the team leads to directly manage these VMs?
+A. Create a role mapping for each team lead and assign appropriately.
+B. Create a VPC for each team lead and give them VPC Admin.
+C. Create a Project for each team lead and assign access.
+D. Create Security Policies to isolate users
+
+10. An administrator needs to configure NTP on Prism Central running on a Hyper-V cluster.
+How should the administrator complete this task?
+A. Add an external NTP server.
+B. Add the DNS server IP.
+C. Add a server with a DNS hostname.
+D. Add the IP of the Domain Controller.
+
+11. Which two entities can be categorized? (Choose two.)
+A. Storage Containers
+B. Alerts
+C. Virtual Machines
+D. ISO Images
+
+12. What feature allows receiving a weekly message about infrastructure performance summary?
+A. Admin Center Life Cycle Manager
+B. Prism Central Syslog
+C. Infrastructure VMs List
+D. Intelligent Operations Reports
+
+13. Which storage attributes do Storage Policies manage?
+A. Storage Containers and Volume Groups
+B. Replication Factor and Encryption
+C. Shares and Object Stores
+D. Data Protection and Security
+
+14. An administrator notices the message shown in the exhibit when navigating to LCM from Prism
+Central. {LCM -> inventory -> A newer version 2.7.1 of  the framework is available}
+Which action should the administrator take to update LCM to the latest version?
+A. Run an AOS upgrade.
+B. Run an AHV upgrade.
+C. Perform an Inventory Scan.
+D. Download and install the latest LCM version from a CVM
+
+15. An administrator needs to ensure that a VM is powered on before the rest of the VMs when starting
+a host.
+Which configuration option allows this behavior?
+A. Recovery Plan
+B. Host Affinity
+C. High Availability
+D. Agent VM
+
+16. An administrator is preparing for a firmware upgrade on a host and wants to manually migrate VMs
+before executing the LCM upgrade. However, one VM is unable to migrate while others migrate
+successfully.
+Which action would fix the issue?
+A. Enable Acropolis Dynamic Scheduling (ADS) at the cluster level.
+B. Update Link Layer Discovery Protocol (LLDP).
+C. Disable Agent VM within the VM configuration options.
+D. Configure backplane port groups that are assigned to the CVM
+
+17. A company is evaluating Nutanix Disaster Recovery (DR) to protect multiple business-critical
+applications. Some applications are built using a 3-tier architecture and have interdependencies.
+After failover, the VM's static IP address is retained, but DNS configuration is lost.
+How should an administrator proceed to resolve this issue?
+A. Configure Self-Service Restore.
+B. Create custom in-guest scripts to preserve the statically assigned DNS IP addresses.
+C. Install Network Manager command-line tool (nncli) in the protected Windows VMs.
+D. Configure a Protection Domain
+
+18. An administrator needs to create a storage container named TestData with the following conditions:
+Replication Factor (RF) = 1 (RF1)
+Inline Compression enabled
+Deduplication disabled
+Maximum storage capacity = 100 GiB
+How should the administrator complete this task?
+A. Log into Prism Element and create the storage container with an Advertised Capacity of 100 GiB.
+B. Log into Prism Element and create the storage container.
+C. Log into Prism Central and create the storage container with a Reserved Capacity of 100 GiB.
+D. Log into Prism Central and create the storage container
+
+19. Which predefined view in Prism Central’s Intelligent Operations should be used to determine which
+VM is consuming excessive resources and causing performance issues for others?
+A. Inactive VMs List
+B. Overprovisioned VMs List
+C. Bully VMs List
+D. Constrained VMs List
+
+20. Which feature deploys a temporary VM that allows an administrator to log in and apply OS patches
+to a VM template?
+A. Create VM from Template
+B. Complete Guest OS Update
+C. Update Configuration
+D. Update Guest OS
+
+21. A user created a report in the Intelligent Operations Analysis Dashboard but forgot to download it.
+However, after logging back into Prism Central, the administrator finds that the report is no longer
+available.
+What is the most likely cause?
+A. A user with Cluster Viewer role deleted the report.
+B. The user-generated report was archived.
+C. Reports are automatically deleted after 24 hours.
+D. The report is stored in the cluster’s Prism Element.
