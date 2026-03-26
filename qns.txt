@@ -319,4 +319,138 @@ B. 3
 C. 4
 D. 5
 
-41.
+41. An administrator wants to live-migrate a vGPU-enabled VM from one host to another within the
+same cluster.
+What requirements must be met before initiating the migration?
+A. The target host has sufficient resources to support the VM.
+B. The vGPU profile needs to be changed.
+C. The VM must be configured as an agent VM.
+D. The host affinity for the VM must be set to a specific host.
+
+42. If an administrator creates a report with no retention policy configured, how many instances of the
+report are retained by default?
+A. 5
+B. 10
+C. 15
+D. 20
+
+43. An administrator wants to ensure that user VMs on AHV hosts can take advantage of bandwidth
+beyond a single adapter in a bond.
+Which uplink Bond Type should the administrator configure to accomplish this?
+A. No Uplink Bond
+B. Active-Active
+C. Active-Active with MAC pinning
+D. Active-Backup
+
+44. An administrator has been asked to calculate baseline Capacity Runway on a newly registered AHV
+cluster.
+The cluster has been running for 16 days, but no runway projections are displayed.
+Why are no Capacity Runway projections being displayed?
+A. Capacity Planning requires at least 30 days of data.
+B. Capacity Planning requires at least 21 days of data.
+C. Capacity Planning requires at least 3 months of data.
+D. Capacity Planning requires at least 6 months of data.
+
+45. An administrator is configuring a replication schedule on multiple remote locations deployed using a
+single-node cluster. The goal is to achieve the lowest possible RPO (Recovery Point Objective).
+How should the administrator configure the replication schedule?
+A. Configure NearSync replication.
+B. Configure a schedule for 16 minutes up to 59 minutes.
+C. Configure Async replication.
+D. Configure a schedule for 1 minute up to 15 minutes.
+
+46. An administrator attempted to enable Data-in-Transit Encryption on a Scale-Out Prism Central cluster
+to encrypt service-level traffic between nodes. However, the feature did not work correctly due to a
+firewall restriction.
+Which CVM-specific port should be allowed through the firewall for Data-in-Transit Encryption?
+A. 2009
+B. 2010
+C. 2020
+D. 9440
+
+47. A Disaster Recovery administrator has set up a Protection Policy for 50 workloads, all configured
+similarly.
+The RPO is 60 minutes with a specified retention of 10 local copies, 5 remote copies, and crash
+consistency.
+After activation, recovery points are not appearing at the DR site, even though they are visible on the
+production side.
+What is the most likely issue?
+A. Nutanix Guest Tools (NGT) is not installed on the source VMs.
+B. Windows updates need to be applied to all affected VMs.
+C. The storage container name on the DR cluster does not match the production cluster.
+D. The storage container RF factor does not match in both clusters.
+
+48. An administrator needs to optimize a VM’s storage by leveraging compression features. The VM’s
+vDisks are currently stored in a default storage container with no optimizations enabled.
+How should the administrator proceed?
+A. Migrate vDisks to the Production storage container.
+B. Recreate the VM in the Production storage container and copy data.
+C. Migrate the VM to the Production storage container.
+D. Recreate the vDisk in the Production storage container and copy data.
+
+49. Which two URLs must be accessible from a Connected Site’s Controller VMs to allow Life Cycle
+Manager (LCM) to download software updates?
+A. download.nutanix.com
+B. mynutanix.com
+C. release-api.nutanix.com
+D. portal.nutanix.com
+
+50. An administrator needs to create a storage container for VM disks. The container must meet the
+following conditions:
+10 GiB of the total allocated space must not be used by other containers.
+The container must have a maximum storage capacity of 500 GiB.
+What settings should the administrator configure while creating the storage container?
+A. Set Advertised Capacity to 10 GiB and Reserved Capacity to 500 GiB.
+B. Set Advertised Capacity to 10 GiB.
+C. Set Reserved Capacity to 500 GiB.
+D. Set Reserved Capacity to 10 GiB and Advertised Capacity to 500 GiB
+
+51. In a five-node cluster, an administrator noticed that three VMs are consuming too many resources on
+a single host.
+Acropolis Dynamic Scheduling (ADS) is not able to migrate these VMs.
+What is the most likely reason preventing ADS from migrating these VMs?
+A. VMs use a Volume Group.
+B. VMs use GPU pass-through.
+C. VM-VM anti-affinity policy is set.
+D. VMs use external Network Attached Storage.
+
+52. An administrator using a dark site deployment for LCM is attempting to upgrade to the latest BIOS.
+After completing an inventory scan, the administrator does not see the expected BIOS version
+available for upgrade. What is the most likely reason the latest BIOS is not shown?
+A. AOS needs to be upgraded first.
+B. The latest compatibility bundle has not been uploaded.
+C. The BMC version needs to be upgraded first.
+D. The dark site webserver is not accessible.
+
+53. Which update in LCM can an administrator apply on a per-node basis?
+A. AOS
+B. BMC
+C. NCC
+D. AHV
+
+54. An administrator is experiencing storage performance issues on a Windows Server 2019 VM with the
+following configuration:
+vCPU: 1
+VRAM: 8 GB
+vSCSI: VirtIO SCSI Controller
+vDisk: 2 (100 GB, 250 GB)
+vNIC: VirtIO Fast Ethernet
+The AHV cluster is healthy, and other Windows VMs are performing well.
+Which configuration change should be reviewed to enhance VM performance?
+A. Add a second virtual storage controller (vSCSI).
+B. Enable Balance-TCP on bridge (br0).
+C. Increase Controller VM (CVM) resources.
+D. Increase the VM’s number of vCPUs.
+
+55. An administrator needs to perform an LCM upgrade on an AHV host with GPUs.
+What additional step is required before upgrading the host?
+A. Create an agent VM on each host that has GPU drivers installed.
+B. Run LCM in dark site mode so it can update AHV independently.
+C. Use Direct Uploads to upload appropriate driver bundles.
+D. Update NCC to the latest version and re-run Inventory.
+
+56. What is supported for creating a VM Template in Nutanix?
+A. VM is protected by Protection Domain-based DR.
+B. VM is an agent or a Prism Central VM.
+C. VM has disks located on RF2 containers.
+D. VM runs on the ESXi hypervisor.
