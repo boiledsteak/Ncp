@@ -454,3 +454,180 @@ A. VM is protected by Protection Domain-based DR.
 B. VM is an agent or a Prism Central VM.
 C. VM has disks located on RF2 containers.
 D. VM runs on the ESXi hypervisor.
+
+57. An administrator has configured AHV Metro Availability with Witness and is testing failover
+scenarios. During testing, the administrator disconnects the primary and recovery clusters but Prism Central
+remains connected to the recovery site.
+What are two expected system behaviors? (Choose two.)
+A. Guest VM I/O operations pause (freeze) until connectivity is restored.
+B. Guest VM I/O operations pause (freeze) until connectivity between Prism Central and the primary
+site is restored.
+C. Guest VMs failover automatically to the recovery cluster.
+D. Guest VMs continue to run on the primary cluster.
+
+58. What guest customization options are available when creating a VM template?
+A. Sysprep, Cloud-init, Custom Script, Guided Script
+B. Bash, Powershell
+C. Python, YAML
+D. None, guest customization is not supported in Nutanix templates.
+
+59. An administrator notices high CPU usage on a VM and wants to determine whether adding more
+vCPUs would improve performance.
+Which two metrics should be analyzed to make this decision? (Choose two.)
+A. VM CPU Ready Time
+B. VM CPU Usage
+C. Host CPU Usage
+D. Host Memory Swap Out Rate
+
+60. An administrator is protecting an application and its data stored on Volume Groups using Protection
+Domains. During failover tests, all application VMs restore successfully, but the application data is completely missing. How can the Protection Domain configuration be adjusted to avoid this issue in the future? (Choose
+two.)
+A. Select the "Auto protect related entities" checkbox.
+B. Manually add Volume Groups to Protected Entities.
+C. Place Volume Groups in a separate Protection Domain.
+D. Use application-consistent snapshots.
+
+61. An administrator needs to enable Windows Defender Credential Guard to comply with company policy.
+The new VM configurations include:
+Legacy BIOS
+4 vCPUs
+8 GB RAM
+Windows Server 2019
+What must be changed in order to properly enable Windows Defender Credential Guard?
+A. Update vCPU to 8.
+B. Enable UEFI with Secure Boot.
+C. Use Windows Server 2022.
+D. Update Memory to 16GB.
+
+62. An administrator needs to create a single chart showing multiple storage bandwidth metrics a VM is
+consuming. Which type of chart should the administrator create?
+A. Metric Chart
+B. Entity Chart
+C. Hypervisor Performance Chart
+D. VM Summary Chart
+
+63. An administrator is configuring Nutanix Disaster Recovery (DR) for a cross-hypervisor setup (ESXi to AHV) but finds that guest VMs do not recover properly at the DR location. What is required for a successful cross-hypervisor DR event?
+A. Utilize delta disks.
+B. Deploy Legacy BIOS boot on hosts within the cluster.
+C. Use raw device mappings.
+D. Nutanix Guest Tools (NGT) must be installed on source guest VMs
+
+64. An administrator receives an alert in Prism stating:
+"Storage container <container_name> on cluster <cluster_name> will run out of storage resources in approximately 1 day."
+However, the cluster has plenty of available space remaining. What configuration setting is causing the container to run out of space while the cluster has space remaining?
+A. Advertised Capacity is set too low.
+B. Reserved Capacity is set too high.
+C. Compression is set too low.
+D. Replication Factor is set too high.
+
+65. Which two actions occur by default on a node that is placed in Maintenance Mode? (Choose two.)
+A. Non-migratable VMs are powered off and restarted on other hosts in the cluster.
+B. All eligible VMs on the host are migrated to other hosts in the cluster.
+C. All eligible VMs on the host are powered off.
+D. Non-migratable VMs are powered off.
+
+66. An administrator observes an alert in Prism for a hybrid SSD/HDD cluster:
+"Storage Pool SSD utilization consistently above 75%."
+What is the potential impact of this condition?
+A. The cluster is unable to sustain an SSD disk failure.
+B. The cluster may be nearly out of storage for metadata.
+C. The cluster is at risk of entering a read-only state.
+D. Average I/O latency in the cluster may increase.
+
+67. An administrator wants to clean up inactive VMs using VM Efficiency in Nutanix. The business requires that VMs must be inactive for 120 days before deletion. A Playbook was created to delete Dead and Zombie VMs with a 99-day wait period after they are marked inactive.
+How long will have passed before these VMs are deleted? (Choose two.)
+A. For Dead VMs, the wait before deletion is 120 days.
+B. For Zombie VMs, the wait before deletion is 129 days.
+C. For Dead VMs, the wait before deletion is 129 days.
+D. For Zombie VMs, the wait before deletion is 120 days.
+
+68. How can a VM or Volume Group (VG) be associated with a Storage Policy?
+A. Assign the Storage Policy directly on the VM or VG.
+B. Assign the VM or VG directly to the Storage Policy.
+C. Migrate the VM or VG to the Storage Container assigned to the Storage Policy.
+D. Assign the VM or VG to the same Category as the Storage Policy.
+
+69. An administrator is managing a 4-node cluster with different hardware generations:
+Two G5 Nodes → 2 CPUs (12 cores), 1 SSD (1.92 TB), 2 HDDs (4 TB).
+Two G7 Nodes → 2 CPUs (16 cores), 2 SSDs (1.92 TB), 4 HDDs (4 TB).
+The cluster will be decommissioned from production and used for Disaster Recovery (DR) purposes with an RPO of 1 hour.
+What is the best approach when replacing G5 nodes without impacting performance?
+A. New node must have at least 2 SSDs.
+B. New node must be G7 or G8.
+C. New node must have 2 CPUs with 12 cores.
+D. New node must be hybrid.
+
+70. A consultant is configuring syslog monitoring and wants to receive CRITICAL logs from the Audit
+module. Which severity level setting should be configured to get the desired output?
+A. 0
+B. 2
+C. 5
+D. 7
+
+71. An administrator has configured Metro Availability but a few hours later got an NCC warning:
+Node x.x.X.X:
+WARN: Break replication timeout of Metro protection domain 'M1' is below the recommended minimum.
+What is a possible resolution for this issue?
+A. Update the break_replication_timeout to 10 seconds.
+B. Update the break_replication_timeout to 5 milliseconds.
+C. Update the break_replication_timeout to 15 milliseconds.
+D. Update the break_replication_timeout to 15 seconds
+
+72. What is supported for creating a VM Template in Nutanix?
+A. VM is protected by Protection Domain-based D
+B. VM is an agent or a Prism Central V
+C. VM has disks located on RF2 containers.
+D. VM runs on the ESXi hypervisor.
+
+73. An administrator is managing an environment based on two different AHV-based and ESXi-based clusters. Workloads are evenly distributed and in a healthy state.
+A Linux VM running on ESXi is not performing well at the storage level and is configured as follows:
+• VCPU: 8
+• VRAM: 32
+• vDisk: 3, first 100 GB, second 250 GB, third 250 GB
+What is the easiest way to test VM performance, while minimizing downtime?
+A. Increase the number of vCPUs.
+B. Migrate the VM to the AHV cluster.
+C. Enable vDisk sharding at AOS level.
+D. Collapse the second and the third disk into a single one
+
+74. What is the best way to automate the deployment of 100 Linux VMs with similar configurations but different hostnames, local configurations, and install packages?
+A. Manual configuration
+B. Cloud-Init configuration
+C. SysPrep Configuration
+D. VM template configuration
+
+75. An administrator needs to compare the performance of two VMs that are running on separate Nutanix clusters.
+When creating an Analysis chart in Prism Central Intelligent Operations, the administrator discovers that it is not possible to add VM metrics for IOPS and CPU utilization to the same chart.
+How should the administrator resolve this issue?
+A. Create an Entity chart instead of a Metric chart.
+B. Ensure that both VMs have the same number of vCPUs provisioned.
+C. Migrate one of the VMs so that both VMs are running on the same cluster.
+D. Create separate charts for metrics with different units of measurement
+
+76. Per organizational requirements, an administrator has uploaded a signed SSL certificate to Prism for Common Access Card (CAC) authentication. Once the certificate has been uploaded successfully, the certificate appears to be valid but CAC authentication is not functional.
+What is a potential cause of this problem?
+A. There is no Certificate Revocation List (CRL) configured.
+B. RSA key size is incorrect.
+C. Online Certificate Status Protocol (OCSP) is not enabled.
+D. Signature Algorithm is incorrect.
+
+77. What happens if an agent VM is powered off and then manually started on another host?
+A. Agent VM become unresponsive.
+B. Agent VM cannot be migrated back to the original host.
+C. Agent VM migrates back to the original host once it's powered on.
+D. Agent VM migrates to another host automatically
+
+78. An administrator manages multiple clusters at different geographic sites via a single Prism Central.
+What should be configured to optimize image uploads to all locations?
+A. Image Placement Policy with Soft Enforcement
+B. Custom Image Upload Role
+C. Bandwidth Throttling Policy
+D. Image Placement Policy with Hard Enforcement
+
+79. A new employee has inherited a partially configured Disaster Recovery (DR) schema. Source workloads have been identified and Nutanix Guest Tools has been installed.
+There are two Protection Polices in place, one with an asynchronous schedule with a 1-hour RPO and a second policy utilizing synchronous replication. All of these workloads need to be recovered at a DR location and this will be orchestrated by Prism Central Recovery Plans.
+What is the best way to setup this recovery orchestration?
+A. Identify the workload startup order and create Recovery Plans corresponding to the startup order.
+B. Setup a Recovery Plan for the asynchronous replication and convert the synchronous replication to a Protection Domain.
+C. Setup two Recovery Plans, one for the asynchronous replication and one for the synchronous replication.
+D. Setup a single Recovery Plan utilizing stages of recovery delays as needed.

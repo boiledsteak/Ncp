@@ -4,6 +4,7 @@
 ```
 https://www.certqueen.com/NCP-MCI-6.10-exam.html
 https://www.actual4test.com/exam/NCP-MCI-6.10-questions#
+https://www.daypo.com/mci-610.html#test
 ```
 ## Notes
 
@@ -67,3 +68,17 @@ When you assign VMs, storage, any resources to a Protection Domain, you are sayi
 
 
 Nutanix AHV port mirroring is performed within the same node first then sent elsewhere
+
+AHV Metro Availability with Witness = The witness ensures that only one node is active among the HA nodes. Enables split brain protection for automatic failover. If nodes cannot talk to one another, and cannot talk to witness, then system will stop
+
+Entity Chart	Multiple metrics for ONE entity
+Metric Chart	One metric across MANY entities
+
+hybrid storage pool with SSD + HDD = SSD used for hot writing only (read cache / write buffer / metadata). HDD stores most things
+
+Storage Policies in Nutanix are not directly assigned to VMs or Volume Groups.Instead, they work through:
+Categories (policy → category → entity mapping)
+
+agent vm cannot be used as template
+
+storage containers cannot be categorised
