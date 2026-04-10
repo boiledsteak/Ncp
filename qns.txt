@@ -190,8 +190,7 @@ B. LCM is not supported on single-node clusters.
 C. LCM cannot perform firmware upgrades on single-node clusters.
 D. LCM does not have connectivity to the internet.
 
-25. An administrator is responsible for resource planning and needs to plan for resiliency of a 10-node
-RF3 cluster. The cluster has 100TB of storage.
+25. An administrator is responsible for resource planning and needs to plan for resiliency of a 10-node RF3 cluster. The cluster has 100TB of storage.
 How should the administrator plan for capacity in the event of future failures?
 A. Set Reserve Storage Capacity (%) to 20.
 B. Set Reserve Capacity for Failure to None.
@@ -405,8 +404,7 @@ B. Set Advertised Capacity to 10 GiB.
 C. Set Reserved Capacity to 500 GiB.
 D. Set Reserved Capacity to 10 GiB and Advertised Capacity to 500 GiB
 
-51. In a five-node cluster, an administrator noticed that three VMs are consuming too many resources on
-a single host.
+51. In a five-node cluster, an administrator noticed that three VMs are consuming too many resources on a single host.
 Acropolis Dynamic Scheduling (ADS) is not able to migrate these VMs.
 What is the most likely reason preventing ADS from migrating these VMs?
 A. VMs use a Volume Group.
@@ -572,12 +570,6 @@ A. Update the break_replication_timeout to 10 seconds.
 B. Update the break_replication_timeout to 5 milliseconds.
 C. Update the break_replication_timeout to 15 milliseconds.
 D. Update the break_replication_timeout to 15 seconds
-
-72. What is supported for creating a VM Template in Nutanix?
-A. VM is protected by Protection Domain-based D
-B. VM is an agent or a Prism Central V
-C. VM has disks located on RF2 containers.
-D. VM runs on the ESXi hypervisor.
 
 73. An administrator is managing an environment based on two different AHV-based and ESXi-based clusters. Workloads are evenly distributed and in a healthy state.
 A Linux VM running on ESXi is not performing well at the storage level and is configured as follows:
