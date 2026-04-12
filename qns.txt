@@ -623,3 +623,40 @@ A. Identify the workload startup order and create Recovery Plans corresponding t
 B. Setup a Recovery Plan for the asynchronous replication and convert the synchronous replication to a Protection Domain.
 C. Setup two Recovery Plans, one for the asynchronous replication and one for the synchronous replication.
 D. Setup a single Recovery Plan utilizing stages of recovery delays as needed.
+
+80. What can be used to group a set of VMs?
+A. Labels
+B. Projects
+C. Tags
+D. catalog items
+
+81. An administrator wants to create a VM with memory overcommit features enabled in nutanix environment. 
+Which statement best describes how the admin will perform this VM creation?
+A. Memory overcommit can only be updated using the Prism Central console
+B. Memory overcommit can not be enabled for VM from the Prism Central console
+C. Memory overcommit can be enabled while creating a VM using Prism Element Web console
+D. Memory overcommit can only be updated using the Prism Element Web Console once VM is created
+
+82. An administrator is attempting to upgrade the NIC firmware on a Nutanix cluster and sees the error displayed
+Which log is the most appropriate to analyse the LCM precheck failure
+A. lcm_wget.out
+B. catalog.out
+C. genesis.out
+D. lcm_ops.out
+
+83. An admin is trying to troubleshoot the environment after NCC raised an alert. 
+"Failed to connect to the remote site"
+Which two steps should an admin follow to provide a solution? (choose two)
+A. If the remot site has been re-configured and the cluster has a new cluster incernation ID, re create the remote site
+B. Confirm that the remote cluster is reachable, and ports 2009 and 2020 are open between the clusters
+C. Check if ping packets with an MTU of 9000 reach the destination cluster
+D. Configure NAT performed by any device in between the two Nutanix clusters
+
+84. An admin is managing two clusters registered to two different Prism Central instances. After configuring a protection policy for synchronous replication and verifying data replication, the admin would like to create a new recovery plan with automatic failover. However, the admin finds that the recovery plan workflow offrs only manual failure execution mode
+What configuration must be fixed to execute the failover automatically
+A. protection policy also have a local schedule
+B. modify firewall to open 2030, 2036, 2073, 2090 ports on every local and remote CVMs.
+C. verify protected VM are not already part of another recovery plan
+D. primary location and recovery location must be in the same AZ
+
+85. an admin wants to ensure that DR snapshots are protected from inadvertent or malicious deletion without notification
