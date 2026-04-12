@@ -660,3 +660,15 @@ C. verify protected VM are not already part of another recovery plan
 D. primary location and recovery location must be in the same AZ
 
 85. an admin wants to ensure that DR snapshots are protected from inadvertent or malicious deletion without notification
+A. create and apply alert policy
+B. assign DR admin role to users
+C. create and apply approval policy
+D. create a playbook to alert on event 
+
+86. A company is evaluating Nutanix DR to protect some business critical applications and tasked an administrator to find an optimal configuration providing highest resiliency and lowest RPO to the production environment.
+The company's production environment is deployed on two physical sites with each hosting one AHV-based cluster.
+What configuration will meet the company's requirements?
+A. Deploy Prism Central instance on one of the sites, configure Prism Central Disaster Recovery, and setup Metro AHV
+B. Deploy Prism Central instance on each site. Configure Metro Availability using Protection Domains.
+C. Deploy one Prism Central instance on each site and configure synchronous replication using Protection Policy.
+D. Deploy Prism Central instance on one of the sites. Configure NearSync replication using Protection Domains.
